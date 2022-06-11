@@ -54,5 +54,8 @@ const screenOptions = {
     headerStyle: {
         backgroundColor: '#457b9d'
     }, 
+    cardStyle: {
+        backgroundColor: '#264653'
+    },
     headerTintColor: '#fff',
 }

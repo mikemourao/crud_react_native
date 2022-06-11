@@ -47,9 +47,9 @@ export default props => {
                 onPress={() => props.navigation.navigate("UserForm", user)}
             >
                 <Avatar source={{uri: user.avatarUrl}} />
-                <Text  style={styles.listData}>{user.name} {'\n'} {user.email}</Text>
-                {/* <Text style={styles.descriptions}>{user.email}</Text> */}
-                
+
+                <Text  style={styles.listData}>{user.name} {'\n'} {user.cell} {'\n'} {user.email} {'\n'} {user.company} {'\n'} {user.note}</Text>
+               
                 <Button 
                     type="clear"
                     icon={<Icon name="delete" size={25} color="#9d0208" style={styles.actions} />} 
@@ -59,8 +59,6 @@ export default props => {
                 />
                           
             </TouchableOpacity>
-
-            // <Text>{user.name} | {user.email}</Text>
         )
     }
 
