@@ -7,6 +7,8 @@ export default ({route, navigation}) => {
     // console.warn(Object.keys(props.route.params.name))
     // console.warn(Object.keys(navigation))
 
+    const avatarUrl = 'https://cdn.pixabay.com/photo/2016/09/28/02/14/user-1699635_960_720.png'
+
     const [user, setUser] = useState(route.params ? route.params : {} );
 
     const { dispatch } = useContext(UsersContext);
@@ -52,14 +54,15 @@ export default ({route, navigation}) => {
                 onChangeText={(note) => {setUser({...user, note})}}
                 value={user.note}
             />
-
-            <Text>URL do Avatar:</Text>
-            <TextInput 
-                placeholder="Informe a URL do avatar"
-                style={style.textInput}
-                onChangeText={(avatarUrl) => {setUser({...user, avatarUrl})}}
-                value={user.avatarUrl}
-            />
+            <View style={style.none}>
+                <Text>URL do Avatar:</Text>
+                <TextInput 
+                    // placeholder="Informe a URL do avatar"
+                     style={style.textInput}
+                    // onChangeText={(avatarUrl) => {setUser({...user, avatarUrl})}}
+                    value={avatarUrl}
+                />
+            </View>
 
             <Button 
                 title="Salvar"
@@ -85,5 +88,8 @@ const style = StyleSheet.create({
     },
     form: {
         padding: 12,
+    },
+    none: {
+        display: 'none',
     }
 });

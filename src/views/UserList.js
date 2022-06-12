@@ -13,6 +13,8 @@ export default props => {
     // console.warn(Object.keys(ctx.state.users));
     const { state, dispatch } = useContext(UsersContext);
 
+    const avatarUrl = 'https://cdn.pixabay.com/photo/2016/09/28/02/14/user-1699635_960_720.png'
+
     function confirmUserDeletion(user) {
         Alert.alert("Excluir o usuário", "Deseja excluir o usuário?", [
             {
@@ -46,7 +48,7 @@ export default props => {
                 key={user.id}
                 onPress={() => props.navigation.navigate("UserForm", user)}
             >
-                <Avatar source={{uri: user.avatarUrl}} />
+                <Avatar source={{uri: avatarUrl}} />
 
                 <Text  style={styles.listData}>{user.name} {'\n'} {user.cell} {'\n'} {user.email} {'\n'} {user.company} {'\n'} {user.note}</Text>
                

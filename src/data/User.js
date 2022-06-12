@@ -19,11 +19,11 @@ export default [
     },
     {
         id: 3,
-        name: 'Dulce Witch',
+        name: 'Loki',
         cell: '(92) 99999-9999',
         email: 'du@ce.com',
-        company: 'Estacio',
-        note: 'Vilã',
+        company: 'Asgard',
+        note: 'Vilão',
         avatarUrl: 'https://cdn.pixabay.com/photo/2013/07/13/01/12/witch-155291_960_720.png'
     },
 ]
